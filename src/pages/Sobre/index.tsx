@@ -11,10 +11,11 @@ export default function Sobre() {
       <h3 className={stylesTema.titulo}>
         Sobre
       </h3>
+      
+      <img src={casa} alt='Casa Aluroni' className={styles.sobreNos}/>
 
       <div className={styles.sobreNos}>
-        <img src={casa} alt='Casa Aluroni' />
-
+        
         <div className={styles.sobreNos__texto}>
           <p>
             Nós do Aluroni oferecemos a vocês, nossos queridos clientes, a Massa Italiana Caseira mais saborosa e sofisticada de São Paulo! Prezamos pelos ingredientes tradicionais da culinária Italiana, frescos e de excelente qualidade para que sua experiência seja ainda mais intensa!
@@ -30,10 +31,11 @@ export default function Sobre() {
       </div>
 
       <div className={styles.imagens}>
-        {imagens.map((img, index) =>
-          <div key={index} className={styles.imagens}>
-            <img src={img} alt="Massa" />
-          </div>)}
+        {imagens.map((foto, index) => 
+          <div key={index} className={styles.imagens__imagem}>
+            <img src={foto} alt='Foto Massa' />
+          </div>
+        )}
       </div>
 
     </section>
