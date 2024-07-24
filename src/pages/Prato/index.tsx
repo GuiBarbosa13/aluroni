@@ -2,6 +2,7 @@ import styles from './Prato.module.scss';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import cardapio from 'data/cardapio.json';
 import Tags from 'components/Tags';
+import NotFound from 'pages/NotFound';
 
 export default function Prato() {
 
@@ -10,7 +11,7 @@ export default function Prato() {
   const navigate = useNavigate();
 
   if(!prato){
-    return '';
+    return <NotFound/>;
   }
 
   return (
